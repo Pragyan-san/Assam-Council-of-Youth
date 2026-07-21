@@ -8,14 +8,16 @@
 
 <title>Assam Council of Youth</title>
 
-
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 
@@ -26,8 +28,11 @@ scroll-behavior:smooth;
 
 body{
 
-background:#080808;
+background:#050505;
+
 color:white;
+
+overflow-x:hidden;
 
 }
 
@@ -35,37 +40,50 @@ color:white;
 
 /* NAVBAR */
 
+
 nav{
 
 position:fixed;
+
 top:0;
+
 width:100%;
 
+height:80px;
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
 
-padding:18px 8%;
+padding:0 8%;
 
-background:rgba(0,0,0,.85);
+background:rgba(0,0,0,0.75);
 
-backdrop-filter:blur(10px);
+backdrop-filter:blur(15px);
 
-border-bottom:1px solid #b30000;
+border-bottom:1px solid rgba(255,0,0,0.4);
 
 z-index:1000;
 
 }
 
 
-.logo{
 
-font-size:28px;
-font-weight:900;
+.logo img{
 
-color:#ff1a1a;
+width:58px;
 
-text-shadow:0 0 15px red;
+height:58px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:2px solid #ff0000;
+
+box-shadow:0 0 25px rgba(255,0,0,.8);
 
 }
 
@@ -74,27 +92,34 @@ text-shadow:0 0 15px red;
 nav ul{
 
 display:flex;
-gap:25px;
+
+gap:30px;
+
 list-style:none;
 
 }
 
 
-nav a{
 
-text-decoration:none;
+nav ul li a{
+
 color:white;
 
-font-weight:bold;
+text-decoration:none;
+
+font-weight:600;
+
+font-size:15px;
 
 transition:.3s;
 
 }
 
 
-nav a:hover{
 
-color:red;
+nav ul li a:hover{
+
+color:#ff1a1a;
 
 }
 
@@ -121,16 +146,7 @@ padding:20px;
 
 background:
 
-linear-gradient(
-
-135deg,
-
-rgba(180,0,0,.75),
-
-rgba(0,0,0,.95)
-
-);
-
+radial-gradient(circle at top,#7a0000,#050505 60%);
 
 }
 
@@ -142,44 +158,80 @@ font-size:65px;
 
 font-weight:900;
 
+letter-spacing:2px;
+
+background:linear-gradient(90deg,#ff0000,#ffffff);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+animation:fade 1.5s;
+
 }
 
 
 
 .hero p{
 
-max-width:800px;
+max-width:850px;
 
 margin:25px auto;
 
-font-size:20px;
+font-size:19px;
 
-line-height:1.7;
+color:#ccc;
 
-color:#ddd;
+line-height:1.8;
+
+}
+
+
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
 
 }
 
 
 
 
+
+/* BUTTON */
+
+
 .btn{
 
 display:inline-block;
 
-padding:15px 35px;
+padding:14px 35px;
 
 margin:10px;
 
-border-radius:40px;
+border-radius:50px;
 
-background:#e50914;
+background:#d00000;
 
 color:white;
 
 text-decoration:none;
 
-font-weight:bold;
+font-weight:700;
 
 box-shadow:0 0 25px rgba(255,0,0,.5);
 
@@ -191,11 +243,15 @@ transition:.3s;
 
 .btn:hover{
 
-transform:scale(1.08);
+transform:translateY(-5px);
+
+background:#ff0000;
 
 box-shadow:0 0 40px red;
 
 }
+
+
 
 
 
@@ -205,7 +261,7 @@ box-shadow:0 0 40px red;
 
 section{
 
-padding:90px 10%;
+padding:100px 10%;
 
 }
 
@@ -215,24 +271,24 @@ padding:90px 10%;
 
 font-size:42px;
 
-margin-bottom:30px;
+margin-bottom:35px;
 
-color:#ff3333;
+color:#ff3030;
 
 }
 
 
 
 
-/* CARDS */
+
+/* GLASS CARDS */
 
 
 .cards{
 
 display:grid;
 
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 
 gap:25px;
 
@@ -242,15 +298,17 @@ gap:25px;
 
 .card{
 
-background:#151515;
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,0,0,.25);
+
+border-radius:25px;
 
 padding:30px;
 
-border-radius:20px;
+backdrop-filter:blur(12px);
 
-border:1px solid rgba(255,0,0,.3);
-
-transition:.3s;
+transition:.4s;
 
 }
 
@@ -262,7 +320,7 @@ transform:translateY(-10px);
 
 border-color:red;
 
-box-shadow:0 0 25px rgba(255,0,0,.3);
+box-shadow:0 0 30px rgba(255,0,0,.3);
 
 }
 
@@ -280,74 +338,11 @@ margin-bottom:15px;
 
 .card p{
 
-color:#ccc;
+color:#ddd;
 
-line-height:1.6;
-
-}
-/* FORMS */
-
-iframe{
-
-border-radius:15px;
+line-height:1.7;
 
 }
-
-
-
-/* FOOTER */
-
-footer{
-
-background:#000;
-
-padding:30px;
-
-text-align:center;
-
-color:#888;
-
-border-top:1px solid rgba(255,0,0,.3);
-
-}
-
-
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-nav ul{
-
-display:none;
-
-}
-
-
-.hero h1{
-
-font-size:40px;
-
-}
-
-
-.hero p{
-
-font-size:16px;
-
-}
-
-
-.title{
-
-font-size:32px;
-
-}
-
-
-}
-
-
 
 </style>
 
@@ -363,7 +358,8 @@ font-size:32px;
 
 <div class="logo">
 
-🔴 ACY
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhgUmRQ4MTAXrJSfhmJElpCZX9nA5tTvvE1cmtkNKQ0g&s=10a"
+alt="ACY Logo">
 
 </div>
 
@@ -389,7 +385,8 @@ font-size:32px;
 
 
 
-<!-- HERO -->
+<!-- HERO SECTION -->
+
 
 <section class="hero">
 
@@ -404,8 +401,9 @@ Assam Council of Youth
 
 <p>
 
-A platform for students to connect, share ideas,
-participate in activities, and build a stronger youth community for a better tomorrow.
+A platform for students and youth to connect,
+share ideas, participate in activities, and build
+a stronger community together.
 
 </p>
 
@@ -430,11 +428,13 @@ Instagram Community
 </a>
 
 
-
 </div>
 
 
 </section>
+
+
+
 
 
 
@@ -456,7 +456,7 @@ About Us
 Assam Council of Youth is a student-focused platform
 created to connect young minds, encourage collaboration,
 and provide a space where students can share ideas,
-experiences, and suggestions and overcome them all-together.
+experiences, and suggestions.
 
 </p>
 
@@ -480,7 +480,9 @@ Student Community
 </h2>
 
 
+
 <div class="cards">
+
 
 
 <div class="card">
@@ -492,11 +494,12 @@ Student Voices
 <p>
 
 Students can share experiences, suggestions,
-and ideas with the community and help fight for the injustice.
+and ideas with the community.
 
 </p>
 
 </div>
+
 
 
 
@@ -519,6 +522,7 @@ colleges, and backgrounds.
 
 
 
+
 <div class="card">
 
 <h3>
@@ -528,7 +532,7 @@ Collaborations
 <p>
 
 Work together on projects, discussions,
-and student activities and fight against the corrupt government
+and student activities.
 
 </p>
 
@@ -540,6 +544,8 @@ and student activities and fight against the corrupt government
 
 
 </section>
+
+
 
 
 
@@ -550,12 +556,15 @@ and student activities and fight against the corrupt government
 <!-- EVENTS -->
 
 
-
 <section id="events">
 
+
 <h2 class="title">
+
 Events & Activities
+
 </h2>
+
 
 
 <div class="cards">
@@ -563,11 +572,6 @@ Events & Activities
 
 
 
-
-
-
-
-<!-- ADD YOUR EVENT HERE -->
 
 <div class="card">
 
@@ -575,50 +579,67 @@ Events & Activities
 🌱 Youth for a Cleaner Tomorrow
 </h3>
 
-<p>
-🧹 Cleanliness Drive at HS Field, Tangla
-</p>
 
 <p>
-📍 Location: HS Field, Tangla<br>
-📅 Date : 25 July 2026<br>
+
+🧹 Cleanliness Drive
+
+</p>
+
+
+<p>
+
+📅 Date: 25th July
+
+<br>
+
+📍 Location: HS Field, Tangla
+
+<br>
+
 🕙 Time: 10:00 AM
+
 </p>
+
+
 
 <p>
-Join Assam Council of Youth in a student-led initiative
-to promote cleanliness, responsibility, and community participation.
+
+Join Assam Council of Youth in a student-led
+initiative to promote cleanliness, responsibility,
+and community participation.
+
 </p>
 
-<a class="btn" 
+
+
+<a class="btn"
 href="https://ig.me/j/AbYDk7Or-ExlIsip"
 target="_blank">
 
-Join the Drive
+Join The Drive
 
 </a>
 
-</div>
 
 
 </div>
 
-</section>
 
 
-<h2 class="title">
-Events & Activities
-</h2>
 
 
-<div class="cards">
+
 
 
 <div class="card">
 
 <h3>
+
 Student Meetups
+
 </h3>
+
 
 <p>
 
@@ -627,39 +648,36 @@ and networking.
 
 </p>
 
+
 </div>
+
+
+
+
 
 
 
 <div class="card">
 
 <h3>
+
 Workshops
+
 </h3>
+
 
 <p>
 
-Learning sessions to improve skills and knowledge.
+Learning sessions to improve skills,
+knowledge and opportunities.
 
 </p>
+
 
 </div>
 
 
 
-<div class="card">
-
-<h3>
-Community Programs
-</h3>
-
-<p>
-
-Student-led activities and initiatives.
-
-</p>
-
-</div>
 
 
 </div>
@@ -667,38 +685,37 @@ Student-led activities and initiatives.
 
 </section>
 
-
-
-
-
-
-
-<!-- GOOGLE FORM -->
-
+<!-- JOIN SECTION -->
 
 <section id="join">
 
 
 <h2 class="title">
-Join ACY
+
+Join Assam Council of Youth
+
 </h2>
+
 
 
 <p>
 
-Register through our official student registration form.
+Become a part of the student community and participate
+in upcoming activities and initiatives.
 
 </p>
 
 
+
 <br>
+
 
 
 <a class="btn"
 href="https://docs.google.com/forms/d/e/1FAIpQLSfkNTbXGc3E1ja3NVvUtMMRuDqSJJdUoHWsYle1Ke01qxDP3w/viewform"
 target="_blank">
 
-Open Registration Form
+Registration Form
 
 </a>
 
@@ -711,26 +728,31 @@ Open Registration Form
 
 
 
-<!-- FEEDBACK -->
+<!-- STUDENT CONCERNS -->
 
 
 <section>
 
 
 <h2 class="title">
+
 Student Feedback & Concerns
+
 </h2>
+
 
 
 <p>
 
-Your feedback helps us understand student needs
-and improve the community.
+Students can share their suggestions,
+ideas and concerns through our official form.
 
 </p>
 
 
+
 <br>
+
 
 
 <a class="btn"
@@ -742,7 +764,9 @@ Submit Feedback
 </a>
 
 
+
 </section>
+
 
 
 
@@ -757,16 +781,21 @@ Submit Feedback
 
 
 <h2 class="title">
-Contact
+
+Contact Us
+
 </h2>
+
 
 
 <div class="card">
 
 
 <p>
+
 📧 Email:
-shivamjdas@gmail.com
+contact@assamcouncilofyouth.com
+
 </p>
 
 
@@ -774,7 +803,9 @@ shivamjdas@gmail.com
 
 
 <p>
-📱 Instagram Community
+
+📱 Join our Instagram Community
+
 </p>
 
 
@@ -785,9 +816,10 @@ shivamjdas@gmail.com
 href="https://ig.me/j/AbYDk7Or-ExlIsip"
 target="_blank">
 
-Join Instagram
+Instagram Group
 
 </a>
+
 
 
 </div>
@@ -801,20 +833,101 @@ Join Instagram
 
 
 
+
+
+<!-- FOOTER -->
+
+
 <footer>
 
 
 <p>
+
 © 2026 Assam Council of Youth
+
 </p>
 
 
 <p>
+
 Built for students and youth communities
+
 </p>
 
 
 </footer>
+
+
+
+
+
+
+<style>
+
+
+footer{
+
+padding:30px;
+
+text-align:center;
+
+background:#000;
+
+border-top:1px solid rgba(255,0,0,.3);
+
+color:#aaa;
+
+}
+
+
+
+@media(max-width:800px){
+
+
+nav{
+
+padding:0 5%;
+
+}
+
+
+
+nav ul{
+
+display:none;
+
+}
+
+
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+
+
+.hero p{
+
+font-size:16px;
+
+}
+
+
+
+.title{
+
+font-size:32px;
+
+}
+
+
+}
+
+
+</style>
+
 
 
 </body>

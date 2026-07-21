@@ -8,24 +8,14 @@
 
 <title>Assam Council of Youth</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-.logo img{
-    width:50px;
-    height:50px;
-    border-radius:50%;
-    object-fit:cover;
-    border:2px solid red;
-}
 <style>
-
-/* ===== GLOBAL ===== */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Inter',sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 
@@ -43,46 +33,39 @@ color:white;
 
 
 
-/* ===== NAVBAR ===== */
-
+/* NAVBAR */
 
 nav{
 
 position:fixed;
-
 top:0;
-
 width:100%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
 
 padding:18px 8%;
 
-display:flex;
+background:rgba(0,0,0,.85);
 
-justify-content:space-between;
+backdrop-filter:blur(10px);
 
-align-items:center;
-
-background:rgba(0,0,0,.8);
-
-backdrop-filter:blur(15px);
-
-border-bottom:1px solid rgba(255,0,0,.3);
+border-bottom:1px solid #b30000;
 
 z-index:1000;
 
 }
 
 
-
 .logo{
 
 font-size:28px;
-
 font-weight:900;
 
 color:#ff1a1a;
 
-text-shadow:0 0 20px red;
+text-shadow:0 0 15px red;
 
 }
 
@@ -91,38 +74,34 @@ text-shadow:0 0 20px red;
 nav ul{
 
 display:flex;
-
 gap:25px;
-
 list-style:none;
 
 }
 
 
-
 nav a{
 
 text-decoration:none;
-
 color:white;
 
-font-weight:600;
+font-weight:bold;
 
 transition:.3s;
 
 }
 
 
-
 nav a:hover{
 
-color:#ff1a1a;
+color:red;
 
 }
 
 
 
-/* ===== HERO ===== */
+
+/* HERO */
 
 
 .hero{
@@ -131,9 +110,9 @@ height:100vh;
 
 display:flex;
 
-align-items:center;
-
 justify-content:center;
+
+align-items:center;
 
 text-align:center;
 
@@ -146,7 +125,7 @@ linear-gradient(
 
 135deg,
 
-rgba(180,0,0,.65),
+rgba(180,0,0,.75),
 
 rgba(0,0,0,.95)
 
@@ -166,19 +145,21 @@ font-weight:900;
 }
 
 
+
 .hero p{
 
-font-size:20px;
-
-color:#ddd;
-
-max-width:750px;
+max-width:800px;
 
 margin:25px auto;
 
+font-size:20px;
+
 line-height:1.7;
 
+color:#ddd;
+
 }
+
 
 
 
@@ -190,19 +171,17 @@ padding:15px 35px;
 
 margin:10px;
 
+border-radius:40px;
+
 background:#e50914;
 
 color:white;
 
 text-decoration:none;
 
-border-radius:40px;
-
 font-weight:bold;
 
-box-shadow:
-
-0 0 25px rgba(255,0,0,.5);
+box-shadow:0 0 25px rgba(255,0,0,.5);
 
 transition:.3s;
 
@@ -214,16 +193,14 @@ transition:.3s;
 
 transform:scale(1.08);
 
-box-shadow:
-
-0 0 40px red;
+box-shadow:0 0 40px red;
 
 }
 
 
 
 
-/* ===== SECTIONS ===== */
+/* SECTIONS */
 
 
 section{
@@ -247,7 +224,7 @@ color:#ff3333;
 
 
 
-/* ===== CARDS ===== */
+/* CARDS */
 
 
 .cards{
@@ -255,8 +232,7 @@ color:#ff3333;
 display:grid;
 
 grid-template-columns:
-
-repeat(auto-fit,minmax(260px,1fr));
+repeat(auto-fit,minmax(250px,1fr));
 
 gap:25px;
 
@@ -272,11 +248,9 @@ padding:30px;
 
 border-radius:20px;
 
-border:
+border:1px solid rgba(255,0,0,.3);
 
-1px solid rgba(255,0,0,.25);
-
-transition:.4s;
+transition:.3s;
 
 }
 
@@ -288,9 +262,7 @@ transform:translateY(-10px);
 
 border-color:red;
 
-box-shadow:
-
-0 0 30px rgba(255,0,0,.3);
+box-shadow:0 0 25px rgba(255,0,0,.3);
 
 }
 
@@ -313,77 +285,17 @@ color:#ccc;
 line-height:1.6;
 
 }
+/* FORMS */
 
+iframe{
 
-
-
-
-/* ===== FORMS ===== */
-
-
-form{
-
-max-width:600px;
-
-}
-
-
-input,
-textarea{
-
-width:100%;
-
-padding:15px;
-
-margin:10px 0;
-
-background:#111;
-
-border:1px solid #333;
-
-border-radius:10px;
-
-color:white;
+border-radius:15px;
 
 }
 
 
 
-input:focus,
-textarea:focus{
-
-outline:none;
-
-border-color:red;
-
-}
-
-
-
-button{
-
-background:#e50914;
-
-color:white;
-
-border:none;
-
-padding:15px 35px;
-
-border-radius:30px;
-
-cursor:pointer;
-
-font-weight:bold;
-
-}
-
-
-
-
-
-/* ===== FOOTER ===== */
-
+/* FOOTER */
 
 footer{
 
@@ -393,7 +305,7 @@ padding:30px;
 
 text-align:center;
 
-color:#777;
+color:#888;
 
 border-top:1px solid rgba(255,0,0,.3);
 
@@ -401,13 +313,9 @@ border-top:1px solid rgba(255,0,0,.3);
 
 
 
-
-
-/* ===== MOBILE ===== */
-
+/* MOBILE */
 
 @media(max-width:800px){
-
 
 nav ul{
 
@@ -425,7 +333,7 @@ font-size:40px;
 
 .hero p{
 
-font-size:17px;
+font-size:16px;
 
 }
 
@@ -449,13 +357,13 @@ font-size:32px;
 <body>
 
 
+<!-- NAVBAR -->
 
 <nav>
 
-
 <div class="logo">
 
-<img src="cheguevaraxZubeengarg.png" width="50">
+🔴 ACY
 
 </div>
 
@@ -464,14 +372,13 @@ font-size:32px;
 
 <li><a href="#about">About</a></li>
 
-<li><a href="#voices">Voices</a></li>
+<li><a href="#community">Community</a></li>
 
 <li><a href="#events">Events</a></li>
 
 <li><a href="#join">Join</a></li>
 
 <li><a href="#contact">Contact</a></li>
-
 
 </ul>
 
@@ -481,6 +388,8 @@ font-size:32px;
 
 
 
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -495,26 +404,28 @@ Assam Council of Youth
 
 <p>
 
-A student community platform where young people connect,share experiences, discuss challenges and overcome them all-together
-
+A platform for students to connect, share ideas,
+participate in activities, and build a stronger youth community for a better tomorrow.
 
 </p>
 
 
 
 <a class="btn"
-href="https://ig.me/j/AbYDk7Or-ExlIsip">
+href="https://docs.google.com/forms/d/e/1FAIpQLSfkNTbXGc3E1ja3NVvUtMMRuDqSJJdUoHWsYle1Ke01qxDP3w/viewform"
+target="_blank">
 
-Join Community
+Join ACY
 
 </a>
 
 
 
 <a class="btn"
-href="#voices">
+href="https://ig.me/j/AbYDk7Or-ExlIsip"
+target="_blank">
 
-Share Your Voice
+Instagram Community
 
 </a>
 
@@ -527,6 +438,9 @@ Share Your Voice
 
 
 
+
+
+<!-- ABOUT -->
 
 
 <section id="about">
@@ -539,9 +453,10 @@ About Us
 
 <p>
 
-Assam Council of Youth is a platform created for students by the students
-to connect, collaborate, share ideas, and participate in
-community activities together and raise their voices against the corrupt govt
+Assam Council of Youth is a student-focused platform
+created to connect young minds, encourage collaboration,
+and provide a space where students can share ideas,
+experiences, and suggestions and overcome them all-together.
 
 </p>
 
@@ -552,15 +467,17 @@ community activities together and raise their voices against the corrupt govt
 
 
 
-<section id="voices">
+
+
+<!-- COMMUNITY -->
+
+
+<section id="community">
 
 
 <h2 class="title">
-
-Student Voices
-
+Student Community
 </h2>
-
 
 
 <div class="cards">
@@ -569,53 +486,72 @@ Student Voices
 <div class="card">
 
 <h3>
-Student Discussions
+Student Voices
 </h3>
 
 <p>
-A place for students to share experiences and ideas.
+
+Students can share experiences, suggestions,
+and ideas with the community and help fight for the injustice.
+
 </p>
 
 </div>
+
 
 
 
 <div class="card">
 
 <h3>
-Suggestions
-
+Youth Network
 </h3>
 
 <p>
-Students can share ideas to fight against the injustice
+
+Connect with students from different schools,
+colleges, and backgrounds.
+
 </p>
 
 </div>
+
 
 
 
 <div class="card">
 
 <h3>
-Community
-
+Collaborations
 </h3>
 
 <p>
-Connect with students from different backgrounds.
+
+Work together on projects, discussions,
+and student activities and fight against the corrupt government
+
 </p>
 
 </div>
+
 
 
 </div>
 
 
 </section>
+
+
+
+
+
+
+
 <!-- EVENTS -->
 
+
 <section id="events">
+
 
 <h2 class="title">
 Events & Activities
@@ -632,7 +568,10 @@ Student Meetups
 </h3>
 
 <p>
-Online and offline discussions where students can connect and exchange ideas.
+
+Online and offline gatherings for discussions
+and networking.
+
 </p>
 
 </div>
@@ -646,7 +585,9 @@ Workshops
 </h3>
 
 <p>
-Skill development programs and student activities.
+
+Learning sessions to improve skills and knowledge.
+
 </p>
 
 </div>
@@ -656,135 +597,13 @@ Skill development programs and student activities.
 <div class="card">
 
 <h3>
-Community Projects
+Community Programs
 </h3>
 
 <p>
-Students working together on useful initiatives.
-</p>
 
-</div>
+Student-led activities and initiatives.
 
-
-</div>
-
-</section>
-
-
-
-
-<!-- ANNOUNCEMENTS -->
-
-
-<section>
-
-
-<h2 class="title">
-Latest Announcements
-</h2>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<h3>
-New Updates
-</h3>
-
-<p>
-Important student announcements will appear here.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>
-Upcoming Programs
-</h3>
-
-<p>
-Stay connected for future activities and events.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>
-Opportunities
-</h3>
-
-<p>
-Discover opportunities for students and volunteers.
-</p>
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<!-- OPPORTUNITIES -->
-
-
-<section>
-
-
-<h2 class="title">
-Student Opportunities
-</h2>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<h3>
-Student Information
-</h3>
-
-<p>
-Find information about educational opportunities and support programs.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-Skill Development
-</h3>
-
-<p>
-Improve skills through community learning.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-Volunteer Programs
-</h3>
-
-<p>
-Take part in student-led activities.
 </p>
 
 </div>
@@ -801,7 +620,7 @@ Take part in student-led activities.
 
 
 
-<!-- JOIN -->
+<!-- GOOGLE FORM -->
 
 
 <section id="join">
@@ -812,29 +631,23 @@ Join ACY
 </h2>
 
 
+<p>
 
-<form>
+Register through our official student registration form.
 
-
-<input type="text" placeholder="Full Name">
-
-
-<input type="email" placeholder="Email Address">
+</p>
 
 
-<input type="text" placeholder="School / College">
+<br>
 
 
-<textarea rows="5"
-placeholder="Tell us about yourself"></textarea>
+<a class="btn"
+href="https://docs.google.com/forms/d/e/1FAIpQLSfkNTbXGc3E1ja3NVvUtMMRuDqSJJdUoHWsYle1Ke01qxDP3w/viewform"
+target="_blank">
 
+Open Registration Form
 
-<button>
-Submit Registration
-</button>
-
-
-</form>
+</a>
 
 
 </section>
@@ -845,38 +658,35 @@ Submit Registration
 
 
 
-<!-- GRIEVANCE -->
+<!-- FEEDBACK -->
 
 
 <section>
 
 
 <h2 class="title">
-Student Feedback & Grievance
+Student Feedback & Concerns
 </h2>
 
 
-<form>
+<p>
+
+Your feedback helps us understand student needs
+and improve the community.
+
+</p>
 
 
-<input type="text"
-placeholder="Your Name">
+<br>
 
 
-<input type="text"
-placeholder="Institution">
+<a class="btn"
+href="https://docs.google.com/forms/d/e/1FAIpQLSfkNTbXGc3E1ja3NVvUtMMRuDqSJJdUoHWsYle1Ke01qxDP3w/viewform"
+target="_blank">
 
+Submit Feedback
 
-<textarea rows="6"
-placeholder="Write your concern or feedback"></textarea>
-
-
-<button>
-Submit
-</button>
-
-
-</form>
+</a>
 
 
 </section>
@@ -894,7 +704,7 @@ Submit
 
 
 <h2 class="title">
-Contact Us
+Contact
 </h2>
 
 
@@ -911,7 +721,7 @@ shivamjdas@gmail.com
 
 
 <p>
-📱 Instagram Community:
+📱 Instagram Community
 </p>
 
 
@@ -919,9 +729,10 @@ shivamjdas@gmail.com
 
 
 <a class="btn"
-href="https://ig.me/j/AbYDk7Or-ExlIsip">
+href="https://ig.me/j/AbYDk7Or-ExlIsip"
+target="_blank">
 
-Join Instagram Group
+Join Instagram
 
 </a>
 
@@ -946,63 +757,11 @@ Join Instagram Group
 
 
 <p>
-Built for students and young communities
+Built for students and youth communities
 </p>
 
 
 </footer>
-
-
-
-
-
-<script>
-
-
-// simple animation effect
-
-const cards=document.querySelectorAll(".card");
-
-
-window.addEventListener("scroll",()=>{
-
-
-cards.forEach(card=>{
-
-
-let position=card.getBoundingClientRect().top;
-
-
-if(position < window.innerHeight-100){
-
-card.style.opacity="1";
-
-card.style.transform="translateY(0)";
-
-}
-
-
-});
-
-
-});
-
-
-
-cards.forEach(card=>{
-
-card.style.opacity="0";
-
-card.style.transform="translateY(40px)";
-
-card.style.transition="0.5s";
-
-});
-
-
-
-</script>
-
 
 
 </body>
